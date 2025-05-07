@@ -12,26 +12,31 @@
      <!-- font -->
      <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
+     <!-- icon -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+     <!-- glightbox -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+
+     <!-- AOS -->
+     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+     <link rel="icon" type="image/png" href="img/logo.png">
 
 </head>
 <body>
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-  </style>
 
 
   <!-- navbar -->
-  <nav class="navbar navbar-expand-lg pixel-navbar">
+  <nav class="navbar navbar-expand-lg pixel-navbar fixed-top">
     <div class="container">
   
       <!-- Logo -->
 
       <a class="navbar-brand d-flex align-items-center" href="#">
-      <img src="img/logo.png" alt="PixelQuest Logo" class="logo-img">
-      <span class="navbar-brand pixel-logo">PixelQuest</span>
-    </a>
+        <img src="img/logo.png" alt="PixelQuest Logo" class="logo-img">
+        <span class="navbar-brand pixel-logo">PixelQuest</span>
+      </a>
   
       <!-- navbar button untuk mobile -->
       <button class="navbar-toggler pixel-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -108,11 +113,14 @@
   
           <h3>Certificate</h3>
           <div class="certificate-gallery">
-            <span>
-            <img src="img/html.jpg" alt="Certificate 1" class="certificate-img">
-            <img src="img/css.jpg" alt="Certificate 2" class="certificate-img">
-          </span>
+            <a href="img/html.jpg" class="glightbox" data-gallery="certificates">
+              <img src="img/html.jpg" alt="Certificate 1" class="certificate-img">
+            </a>
+            <a href="img/css.jpg" class="glightbox" data-gallery="certificates">
+              <img src="img/css.jpg" alt="Certificate 2" class="certificate-img">
+            </a>
           </div>
+          
   
         </div>
   
@@ -129,39 +137,37 @@
       <div class="row text-center">
         
         <!-- Service 1 -->
-        <div class="col-md-4 mb-4">
-          <div class="service-box" id="service-box1">
-            <img src="img/pfpGame.png" alt="Game Development" class="service-icon mb-3">
-            <h4>Game Development</h4>
-            <p>Membuat game dengan style pixel art dan mekanik yang seru.</p>
+          <div data-aos="fade-right" class="col-md-4 mb-4">
+            <div class="service-box" id="service-box1">
+              <img src="img/pfpGame.png" alt="Game Development" class="service-icon mb-3">
+              <h4>Game Development</h4>
+              <p>Membuat game dengan style pixel art dan mekanik yang seru.</p>
+            </div>
           </div>
-        </div>
-  
         <!-- Service 2 -->
-        <div class="col-md-4 mb-4">
-          <div class="service-box" id="service-box2">
-            <img src="img/pfpanm.gif" alt="Animation" class="service-icon mb-3">
-            <h4>Animation</h4>
-            <p>Menghidupkan karakter pixel melalui animasi 2D yang smooth.</p>
+          <div data-aos="fade-up" class="col-md-4 mb-4">
+            <div class="service-box" id="service-box2">
+              <img src="img/pfpanm.gif" alt="Animation" class="service-icon mb-3">
+              <h4>Animation</h4>
+              <p>Menghidupkan karakter pixel melalui animasi 2D yang smooth.</p>
+            </div>
           </div>
-        </div>
   
         <!-- Service 3 -->
-        <div class="col-md-4 mb-4">
-          <div class="service-box" id="service-box3">
-            <img src="img/pfpPixelArt.jpg" alt="Pixel Art" class="service-icon mb-3">
-            <h4>Pixel Art</h4>
-            <p>Membuat karya pixel art berkualitas tinggi untuk berbagai keperluan.</p>
+          <div data-aos="fade-left" class="col-md-4 mb-4">
+            <div class="service-box" id="service-box3">
+              <img src="img/pfpPixelArt.jpg" alt="Pixel Art" class="service-icon mb-3">
+              <h4>Pixel Art</h4>
+              <p>Membuat karya pixel art berkualitas tinggi untuk berbagai keperluan.</p>
+            </div>
           </div>
-        </div>
-  
       </div>
     </div>
   </section>
   
 
 
-  <!-- about gallery -->
+  <!-- gallery -->
   <section class="portfolio-section" id="portfolio">
     <div class="container">
       <h2 class="text-center mb-5" id="JudulGallery">Gallery / Portfolio</h2>
@@ -174,7 +180,6 @@
         <button class="btn btn-outline-primary category-btn" data-filter="animation">Animation</button>
       </div>
   
-      <!-- Portfolio Items -->
       <div class="row portfolio-items">
   
         <!-- Portfolio Card -->
@@ -256,7 +261,7 @@
   <!-- Comment Section -->
 <section id="comment" class="comment-section">
   <div class="container">
-    <h2 class="text-center m    b-4 pixel-logo">Leave a Comment</h2>
+    <h2 class="text-center mb-4 pixel-logo">Leave a Comment</h2>
     <form id="commentForm">
       <div class="mb-3">
         <input type="text" class="form-control" placeholder="Name" required>
@@ -284,7 +289,7 @@
       </div>
       
       <!-- map -->
-      <div class="mapouter">
+      <div class="col-md-6 mapouter">
         <div class="gmap_canvas">
           <iframe class="gmap_iframe"
             frameborder="0"
@@ -296,7 +301,7 @@
         </div>
       </div>
       
-      <div class="col-md-6">
+      <div class="col-md-12">
         <form id="contactForm">
           <div class="mb-3">
             <input type="text" class="form-control" placeholder="Name" required>
@@ -318,17 +323,82 @@
     </section>
 
   <!-- Footer -->
-  <footer class="footer">
-    <div class="container text-center">
-    <p class="mb-0">© 2025 waafi. All Rights Reserved.</p>
-    </div>
-  </footer>
+   <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <h6>Waafi Hariri</h6>
+          <p class="text-justify">Mahasiswa universitas battuta,sebuah front-end developer serta seorang artist designer dalam gambaran ber-style pixel-art dan termasuk short animationnya,memiliki tujuan untuk membuat game ber design 2D pixel-art menggunakan kesuluruhan pembelajaran yang saya lalui dalam perkuliahan </p>
+        </div>
 
-    
+        <div class="col-xs-6 col-md-3">
+          <h6>Service</h6>
+          <ul class="footer-links">
+            <li><a href="#home">Animation</a></li>
+            <li><a href="#home">Pixel design</a></li>
+            <li><a href="#home">Game dev</a></li>
+            <li><a href="#home">html dev</a></li>
+            <li><a href="#home">css dev</a></li>
+            <li><a href="#home">Java Dev</a></li>
+          </ul>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6>Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#services">Service</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#article">Article</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <p class="copyright-text">Copyright &copy; 2025 All Rights Reserved by 
+       <a href="#about"><b>Waafi</b></a>.
+          </p>
+        </div>
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <ul class="social-icons">
+            <li><a class="facebook" href="#"><i class="bi bi-facebook"></i></a></li>
+            <li><a class="twitter" href="#"><i class="bi bi-instagram"></i></a></li>
+            <li><a class="linkedin" href="#"><i class="bi bi-linkedin"></i></a></li>
+            <li><a class="whatsapp" href="#"><i class="bi bi-whatsapp"></i></a></li>   
+          </ul>
+        </div>
+      </div>
+    </div>
+</footer>
+
+
+
     <!-- Boostrap Js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
 
+
+   <!-- glightbox -->
+   <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+   <script>
+     const lightbox = GLightbox({
+    selector: '.glightbox'
+    });
+    </script>
+
+
     <!-- Js -->
      <script src="script.js"></script>
+    
+     <!-- AOS -->
+     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+    AOS.init();
+  </script>
 </body>
 </html>
